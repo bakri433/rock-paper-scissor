@@ -1,0 +1,198 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+
+        font-family: "Poetsen One", sans-serif;
+padding: 0 40px;
+background: url(images/body-back.png);
+background-size: cover;
+background-repeat: no-repeat;
+      
+      
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.771);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.game-container{
+    width: 1200px;
+    height: 70vh;
+    top: 50%;
+    left: 50%;
+    position: relative;
+    translate: -50% -50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color:white;
+    border: 10px solid;
+    border-radius: 6px;
+}
+h2{
+    text-align: center;
+}
+.you img{
+    transform: rotate(90deg);
+}
+.Chrome img{
+    transform: rotate(-90deg);
+}
+
+.chrome-img.active{
+    animation: rock 3s alternate;
+}
+@keyframes rock {
+    0%,15%{
+        transform: rotate(-85deg);
+    }
+    15%,30%{
+        transform: rotate(-95deg);
+    }
+    30%,45%{
+        transform: rotate(-85deg);
+    }
+    45%,60%{
+        transform: rotate(-95deg);
+    }
+    60%,75%{
+        transform: rotate(-85deg);
+    }
+    75%,90%{
+        transform: rotate(-95deg);
+    }
+    90%,100%{
+        transform: rotate(-90deg);
+    }
+}
+.you-img.active{
+animation: you 3s alternate;
+}
+@keyframes you {
+    0%,15%{
+        transform: rotate(85deg);
+    }
+    15%,30%{
+        transform: rotate(95deg);
+    }
+    30%,45%{
+        transform: rotate(85deg);
+    }
+    45%,60%{
+        transform: rotate(95deg);
+    }
+    60%,75%{
+        transform: rotate(85deg);
+    }
+    75%,90%{
+        transform: rotate(95deg);
+    }
+    90%,100%{
+        transform: rotate(90deg);
+    }
+}
+.overlay .content{
+    width: 60%;
+    height: 340px;
+    background: #b1926a;
+    border: 8px solid white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+margin: 40px 0 0 0 ;
+}
+.overlay .content div{
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s ;
+   
+}
+.overlay .content div:hover{
+    border: 4px solid;
+    box-shadow: 0 0 10px black;
+}
+.overlay .content div img{
+    width: 150px;
+    height: 150px;
+
+}
+.overlay h2{
+    color: white;
+    font-size: 40px;
+}
+section{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+display: none;
+justify-content: center;
+align-items: center;
+
+background-color: rgba(0, 0, 0, 0.4);
+
+}
+section .container{
+    width:50%;
+    height: 420px;
+    background-color: #f9f2d5;
+    border-radius: 6px;
+    box-shadow: 0 0 10px darkgrey;
+    padding: 30px;
+}
+section h2{
+    
+    position: relative;
+    font-size: 65px;
+    color: #795548;
+
+}
+
+button{
+    width:200px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #d8b280;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 80px 0 0 0;
+}
+button:hover{
+    box-shadow: 0 0 15px black;
+}
+.draw.active{
+    display: flex;
+}
+.win.active{
+    display: flex;
+}
+.lose.active{
+    display: flex;
+}
