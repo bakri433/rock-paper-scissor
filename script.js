@@ -6,7 +6,7 @@ let win = document.querySelector(".win");
 let lose = document.querySelector(".lose");
 let draw = document.querySelector(".draw");
 let again = document.querySelector("button");
-let imgarray = ["/images/rock.png","/images/paper.png","/images/scissor.png"];
+let imgarray = ["assets/images/rock.png","assets/images/paper.png","assets/images/scissor.png"];
 randomimg=Math.floor(Math.random(imgarray)*3);
 
 console.log(again);
@@ -34,21 +34,21 @@ if(div.classList.contains("rock")){
 
 }else if(div.classList.contains("paper")){
       setTimeout(function(){
-you.src="/images/paper.png"
+you.src="assets/images/paper.png"
     },2800)
 }else if(div.classList.contains("scissor")){
     setTimeout(function(){
-        you.src="/images/scissor.png"
+        you.src="assets/images/scissor.png"
             },2800)
 }
 
-if("/images/"+div.className+".png"==imgarray[randomimg]){
+if("assets/images/"+div.className+".png"==imgarray[randomimg]){
 setTimeout(drawgame, 3500);
 }
-if(div.className=="rock"&&imgarray[randomimg]=="/images/scissor.png"||div.className=="paper"&&imgarray[randomimg]=="/images/rock.png"||div.className=="scissor"&&imgarray[randomimg]=="/images/paper.png"){
+if(div.className=="rock"&&imgarray[randomimg]=="assets/images/scissor.png"||div.className=="paper"&&imgarray[randomimg]=="assets/images/rock.png"||div.className=="scissor"&&imgarray[randomimg]=="assets/images/paper.png"){
     setTimeout(wingame,3500);
 }
-if(div.className=="rock"&&imgarray[randomimg]=="/images/paper.png"||div.className=="paper"&&imgarray[randomimg]=="/images/scissor.png"||div.className=="scissor"&&imgarray[randomimg]=="/images/rock.png"){
+if(div.className=="rock"&&imgarray[randomimg]=="assets/images/paper.png"||div.className=="paper"&&imgarray[randomimg]=="assets/images/scissor.png"||div.className=="scissor"&&imgarray[randomimg]=="assets/images/rock.png"){
     setTimeout(losegame,3500);
 }
 
